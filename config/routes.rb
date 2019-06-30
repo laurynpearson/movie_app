@@ -6,5 +6,8 @@ Rails.application.routes.draw do
   namespace :api do
   #   get "/photos" => "photos#index"
   get "/actors" => "actors#index"
+
+  #query param route
+  get '/actor' => 'actors#index'
   end
 end
