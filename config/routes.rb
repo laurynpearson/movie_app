@@ -7,13 +7,12 @@ Rails.application.routes.draw do
   #   get "/photos" => "photos#index"
   get "/actors" => "actors#index"
 
-  # exercise 1 query param route
-  get '/actor/' => 'actors#show'
+  get '/actors/:id' => 'actors#show'
 
-  #exercise 2 segment url parameter route
-  get '/actor/:id' => 'actors#show'
+  post '/actors' => 'actors#create'
 
-  #exercise 3 body parameter route
-  post '/actor' => 'actors#show'
+  patch '/actors/:id' => 'actors#edit'
+
+  delete '/actors/:id' => 'actors#destroy'
   end
 end

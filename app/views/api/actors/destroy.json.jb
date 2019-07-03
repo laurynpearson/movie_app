@@ -1,0 +1,7 @@
+{
+  message: {
+    deleted_id: @actor.id,
+    deleted_actor_first_name: @actor.first_name,
+    deleted_actor_last_name: @actor.last_name
+  }
+}
