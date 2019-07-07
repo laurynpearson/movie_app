@@ -15,7 +15,9 @@ class Api::ActorsController < ApplicationController
       first_name: params[:first_name],
       last_name: params[:last_name],
       known_for: params[:known_for],
-      id: params[:id]
+      id: params[:id],
+      director: params[:director],
+      english: params[:english]
       )
     @actor.save
     render 'show.json.jb'
@@ -27,6 +29,8 @@ class Api::ActorsController < ApplicationController
     @actor.first_name = params[:first_name] || @actor.first_name
     @actor.last_name = params[:last_name] || @actor.last_name
     @actor.known_for = params[:known_for] || @actor.known_for
+    @actor.director = params[:director] || @actor.director
+    @actor.english = params[:english] || @actor.english
     @actor.save
     render 'show.json.jb'
   end
